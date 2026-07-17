@@ -6,12 +6,25 @@
   <meta name="theme-color" content="#b73d42">
   <meta name="description" content="Austria 2027 — オーストリアをゆっくり歩く旅の計画サイト">
   <title>Austria 2027</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animation.css">
 </head>
-<body>
+<body class="is-loading">
+<div class="opening" aria-hidden="true">
+  <div class="opening-inner">
+    <span class="opening-mark">A</span>
+    <p>Austria 2027</p>
+    <small>A journey begins long before departure.</small>
+  </div>
+</div>
+
 <header class="site-header">
   <a class="brand tap-target" href="#home" aria-label="Austria 2027 ホーム">
     <span class="brand-symbol" aria-hidden="true">
@@ -29,6 +42,7 @@
   <nav class="desktop-nav" aria-label="メインメニュー">
     <a href="#home">Home</a>
     <a href="#mood">Mood</a>
+    <a href="#route">Route</a>
     <a href="#places">Destinations</a>
     <a href="#plan">Plan</a>
   </nav>
@@ -41,6 +55,7 @@
 <nav class="mobile-menu" aria-label="スマホメニュー">
   <a class="tap-target" href="#home">Home</a>
   <a class="tap-target" href="#mood">Mood</a>
+  <a class="tap-target" href="#route">Route</a>
   <a class="tap-target" href="#places">Destinations</a>
   <a class="tap-target" href="#plan">Plan</a>
 </nav>
@@ -88,32 +103,12 @@
         <span class="card-kicker">Planning</span>
         <h2>現在の進捗</h2>
       </div>
-      <div class="progress-track" aria-label="旅行計画の進捗">
-        <div class="progress-item active">
-          <span class="progress-icon">✈</span>
-          <b>航空券</b>
-          <small>検討中</small>
-        </div>
-        <div class="progress-item">
-          <span class="progress-icon">▰</span>
-          <b>ホテル</b>
-          <small>未定</small>
-        </div>
-        <div class="progress-item">
-          <span class="progress-icon">▥</span>
-          <b>鉄道</b>
-          <small>未定</small>
-        </div>
-        <div class="progress-item">
-          <span class="progress-icon">♨</span>
-          <b>グルメ</b>
-          <small>作成前</small>
-        </div>
-        <div class="progress-item">
-          <span class="progress-icon">●</span>
-          <b>コース</b>
-          <small>作成前</small>
-        </div>
+      <div class="progress-track">
+        <div class="progress-item active"><span class="progress-icon">✈</span><b>航空券</b><small>検討中</small></div>
+        <div class="progress-item"><span class="progress-icon">▰</span><b>ホテル</b><small>未定</small></div>
+        <div class="progress-item"><span class="progress-icon">▥</span><b>鉄道</b><small>未定</small></div>
+        <div class="progress-item"><span class="progress-icon">♨</span><b>グルメ</b><small>作成前</small></div>
+        <div class="progress-item"><span class="progress-icon">●</span><b>コース</b><small>作成前</small></div>
       </div>
     </article>
   </div>
@@ -122,69 +117,97 @@
 <section class="section mood-section page-frame" id="mood">
   <div class="section-heading reveal">
     <p>Travel mood</p>
-    <h2>この旅で集めたい時間</h2>
-    <span>写真の大きさと距離感を揃えて、旅のテンポを静かに整える。</span>
+    <h2>写真集をめくるように</h2>
+    <span>街には人の気配を、自然には静けさを。スクロールするたび、旅の時間が少しずつ進む。</span>
   </div>
 
-  <div class="photo-grid">
-    <article class="photo-card reveal">
-      <figure class="photo-frame">
-        <img
-          src="https://images.unsplash.com/photo-1734156500741-95e41477c19b?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&q=82"
-          alt="ウィーンの街を歩く人々"
-          loading="lazy">
-        <figcaption>Vienna</figcaption>
+  <div class="story-stack">
+    <article class="story-panel reveal">
+      <figure class="story-image ken-burns">
+        <img src="https://images.unsplash.com/photo-1734156500741-95e41477c19b?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="ウィーンの街を歩く人々">
+        <figcaption><span>01</span><strong>Vienna</strong><small>Rain after the morning tram.</small></figcaption>
       </figure>
-      <div class="photo-copy">
-        <small>Rainy city walk</small>
-        <h3>雨上がりのウィーン</h3>
-        <p>人が行き交う街の中へ。石畳や建物だけでなく、その場所で過ごす時間を想像できる写真に。</p>
+      <div class="story-copy">
+        <p class="eyebrow">Rainy city walk</p>
+        <h3>人の流れに混ざって、街を歩く。</h3>
+        <p>観光地だけを切り取らず、ウィーンの日常へ入っていく。濡れた石畳、傘、トラム、カフェの灯り。</p>
       </div>
     </article>
 
-    <article class="photo-card reveal">
-      <figure class="photo-frame">
-        <img
-          src="https://images.unsplash.com/photo-1530256379202-4077bd8ab2c6?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&q=82"
-          alt="朝霧に包まれたハルシュタットの湖畔"
-          loading="lazy">
-        <figcaption>Hallstatt</figcaption>
+    <article class="story-panel reverse reveal">
+      <figure class="story-image ken-burns">
+        <img src="https://images.unsplash.com/photo-1530256379202-4077bd8ab2c6?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="朝霧に包まれたハルシュタットの湖畔">
+        <figcaption><span>02</span><strong>Hallstatt</strong><small>Mist between lake and mountain.</small></figcaption>
       </figure>
-      <div class="photo-copy">
-        <small>Misty morning</small>
-        <h3>朝霧のハルシュタット</h3>
-        <p>壮大さを押しつけず、湖畔を歩いたときに目の前へ広がるくらいの距離感で。</p>
+      <div class="story-copy">
+        <p class="eyebrow">Misty morning</p>
+        <h3>静かな朝を、予定として残す。</h3>
+        <p>自然を大きく見せすぎず、自分が湖畔に立ったときの距離感で。写真を撮ったあとに、何もしない時間をつくる。</p>
       </div>
     </article>
 
-    <article class="photo-card reveal">
-      <figure class="photo-frame">
-        <img
-          src="https://images.unsplash.com/photo-1780503779063-7cd399dfe7b7?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&q=82"
-          alt="夕暮れのザルツブルク旧市街"
-          loading="lazy">
-        <figcaption>Salzburg</figcaption>
+    <article class="story-panel reveal">
+      <figure class="story-image ken-burns">
+        <img src="https://images.unsplash.com/photo-1780503779063-7cd399dfe7b7?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="夕暮れのザルツブルク旧市街">
+        <figcaption><span>03</span><strong>Salzburg</strong><small>Golden light before the bells.</small></figcaption>
       </figure>
-      <div class="photo-copy">
-        <small>Golden evening</small>
-        <h3>夕暮れのザルツブルク</h3>
-        <p>街全体を遠くから見下ろしすぎず、実際に歩いてたどり着けそうな夕暮れの景色。</p>
+      <div class="story-copy">
+        <p class="eyebrow">Golden evening</p>
+        <h3>夕暮れが街を変える瞬間へ。</h3>
+        <p>歩いてたどり着ける場所から、ゆっくり暗くなる街を見る。鐘の音と街灯が、一日の終わりを知らせる。</p>
       </div>
     </article>
 
-    <article class="photo-card reveal">
-      <figure class="photo-frame">
-        <img
-          src="https://images.unsplash.com/photo-1555330600-877039de636d?ixlib=rb-4.1.0&auto=format&fit=crop&w=1200&q=82"
-          alt="緑に囲まれたザルツカンマーグートの湖畔"
-          loading="lazy">
-        <figcaption>Salzkammergut</figcaption>
+    <article class="story-panel reverse reveal">
+      <figure class="story-image ken-burns">
+        <img src="https://images.unsplash.com/photo-1555330600-877039de636d?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="緑に囲まれたザルツカンマーグートの湖畔">
+        <figcaption><span>04</span><strong>Salzkammergut</strong><small>An afternoon with nowhere to rush.</small></figcaption>
       </figure>
-      <div class="photo-copy">
-        <small>Green afternoon</small>
-        <h3>緑が映える湖と山</h3>
-        <p>自然は静かに。山を大きく見せすぎず、湖畔の午後を想像できる規模感に揃える。</p>
+      <div class="story-copy">
+        <p class="eyebrow">Green afternoon</p>
+        <h3>移動しない午後も、旅の一部。</h3>
+        <p>山や湖の壮大さよりも、そこで過ごせる時間を大切に。湖畔を歩き、座り、少し遠くを見る。</p>
       </div>
+    </article>
+  </div>
+</section>
+
+<section class="route-section page-frame" id="route">
+  <div class="section-heading reveal">
+    <p>Journey route</p>
+    <h2>日本から、静かな湖と街へ</h2>
+    <span>移動そのものも旅の物語として残す。</span>
+  </div>
+
+  <div class="route-map reveal">
+    <div class="route-line" aria-hidden="true"></div>
+
+    <article class="route-stop">
+      <span class="route-dot">01</span>
+      <small>Start</small>
+      <h3>Japan</h3>
+      <p>旅は空港へ向かう朝から始まる。</p>
+    </article>
+
+    <article class="route-stop">
+      <span class="route-dot">02</span>
+      <small>City</small>
+      <h3>Vienna</h3>
+      <p>人の気配、宮殿、カフェ、石畳。</p>
+    </article>
+
+    <article class="route-stop">
+      <span class="route-dot">03</span>
+      <small>Lake</small>
+      <h3>Salzkammergut</h3>
+      <p>湖畔で速度を落とす二日間。</p>
+    </article>
+
+    <article class="route-stop">
+      <span class="route-dot">04</span>
+      <small>Evening</small>
+      <h3>Salzburg</h3>
+      <p>夕暮れの街で旅を締めくくる。</p>
     </article>
   </div>
 </section>
@@ -199,28 +222,17 @@
   <div class="destination-list">
     <article class="destination-row reveal">
       <span class="destination-number">01</span>
-      <div>
-        <h3>Vienna</h3>
-        <p>宮殿、教会、カフェ、人が行き交う雨上がりの街。</p>
-      </div>
+      <div><h3>Vienna</h3><p>宮殿、教会、カフェ、人が行き交う雨上がりの街。</p></div>
       <em>3 nights</em>
     </article>
-
     <article class="destination-row reveal">
       <span class="destination-number">02</span>
-      <div>
-        <h3>Salzkammergut</h3>
-        <p>ハルシュタットだけでなく、湖畔の日常を歩く。</p>
-      </div>
+      <div><h3>Salzkammergut</h3><p>ハルシュタットだけでなく、湖畔の日常を歩く。</p></div>
       <em>2 nights</em>
     </article>
-
     <article class="destination-row reveal">
       <span class="destination-number">03</span>
-      <div>
-        <h3>Salzburg</h3>
-        <p>夕暮れ、鐘の音、石畳の路地。</p>
-      </div>
+      <div><h3>Salzburg</h3><p>夕暮れ、鐘の音、石畳の路地。</p></div>
       <em>2 nights</em>
     </article>
   </div>
@@ -229,10 +241,7 @@
 <section class="note-section page-frame">
   <div class="note-card reveal">
     <p>Concierge note</p>
-    <blockquote>
-      この旅は、観光地をいくつ回ったかではなく、<br>
-      “あの朝の空気を覚えているか”で完成する。
-    </blockquote>
+    <blockquote>この旅は、観光地をいくつ回ったかではなく、<br>“あの朝の空気を覚えているか”で完成する。</blockquote>
     <small>— Austria 2027 living guide</small>
   </div>
 </section>
@@ -246,7 +255,7 @@
 <nav class="mobile-tabbar" aria-label="スマホ下部メニュー">
   <a class="tap-target active" href="#home"><span>⌂</span><small>Home</small></a>
   <a class="tap-target" href="#mood"><span>◫</span><small>Mood</small></a>
-  <a class="tap-target" href="#places"><span>⌖</span><small>Places</small></a>
+  <a class="tap-target" href="#route"><span>→</span><small>Route</small></a>
   <a class="tap-target" href="#plan"><span>✓</span><small>Plan</small></a>
 </nav>
 
