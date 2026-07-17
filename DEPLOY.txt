@@ -1,0 +1,25 @@
+Austria 2027 v0.4.1
+
+重要：このZIPは、解凍後に表示されるファイルとフォルダをリポジトリ直下へ上書きしてください。
+Austria2027_v0.4.1 フォルダ自体をリポジトリ内へ入れないでください。
+
+リポジトリ直下が次の状態になれば正解です。
+index.html
+flights.html
+hotels.html
+rail.html
+schedule.html
+gourmet.html
+cafe.html
+map.html
+budget.html
+packing.html
+css/
+js/
+manifest.json
+
+GitHub Desktop:
+1. Changes に多数の変更と新規ファイルが出ていることを確認
+2. Summary: Release v0.4.1 full planner fix
+3. Commit to main
+4. Push origin
