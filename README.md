@@ -1,21 +1,22 @@
 # Austria 2027
 
 ## Version
-v0.3.0
+v0.4.0
 
-## Update
-- ロード時のオープニング演出
-- Cormorant Garamond + Interへフォント統一
-- 写真集をめくるようなストーリー構成
-- スクロール連動フェードアニメーション
-- 写真のゆっくりしたKen Burnsズーム
-- ガラスカードの透明感と奥行きを改善
-- 日本 → ウィーン → ザルツカンマーグート → ザルツブルクの旅ロードマップ
-- スマホ表示とタップ領域を維持
+## Added
+- Flights
+- Hotels
+- Rail
+- Schedule
+- Gourmet
+- Cafe
+- Map
+- Budget
+- Packing
+- Placeholder names
+- Shorter copy
 
 ## Deploy
-このフォルダの中身を現在のAustria2027リポジトリへ上書きしてください。
-GitHub DesktopでCommit → PushするとVercelへ反映されます。
+Replace the repository files with this folder.
 
-## Commit message
-Release v0.3.0 immersive journey update
+Commit: `Release v0.4.0 full planner structure`
