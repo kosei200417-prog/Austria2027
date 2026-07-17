@@ -1,1 +1,1 @@
-/* future */
+@keyframes drift{from{transform:rotate(-2.6deg) scale(1.08) translate(-1%,-1%)}to{transform:rotate(-1deg) scale(1.12) translate(1%,1%)}}@keyframes wave{from{clip-path:polygon(0 5%,18% 0,37% 6%,56% 1%,75% 7%,100% 2%,100% 100%,0 100%)}to{clip-path:polygon(0 0,18% 7%,37% 1%,56% 8%,75% 2%,100% 7%,100% 100%,0 100%)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}

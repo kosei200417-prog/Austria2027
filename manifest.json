@@ -1,1 +1,10 @@
-{"name":"Austria 2027"}
+{
+  "name": "Austria 2027",
+  "short_name": "Austria 2027",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f2ed",
+  "theme_color": "#b83b3f",
+  "lang": "ja",
+  "icons": []
+}
