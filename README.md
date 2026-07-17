@@ -1,22 +1,14 @@
-# Austria 2027
+# Austria 2027 v0.5.0
 
-## Version
-v0.4.0
+写真集 × 旅のしおりのホームデザイン。
 
-## Added
-- Flights
-- Hotels
-- Rail
-- Schedule
-- Gourmet
-- Cafe
-- Map
-- Budget
-- Packing
-- Placeholder names
-- Shorter copy
+主な変更:
+- カード一覧を廃止
+- 大きな写真で旅を読み進める構成
+- Vienna / Hallstatt / Salzkammergut / Salzburg
+- ホテル仮写真と Hotel 1〜3
+- オーストリア料理の注目カード
+- Rail / Budget / Packing / Mapへの導線
+- スマホ下部ナビ
 
-## Deploy
-Replace the repository files with this folder.
-
-Commit: `Release v0.4.0 full planner structure`
+Commit: `Release v0.5.0 editorial journey`

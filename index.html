@@ -3,255 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#b73d42">
-  <meta name="description" content="Austria 2027 — オーストリアをゆっくり歩く旅の計画サイト">
+  <meta name="theme-color" content="#231f1c">
+  <meta name="description" content="Austria 2027 — 写真集のような旅のしおり">
   <title>Austria 2027</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animation.css">
-  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/editorial.css">
 </head>
-<body class="is-loading">
-<div class="opening" aria-hidden="true">
-  <div class="opening-inner">
-    <span class="opening-mark">A</span>
-    <p>Austria 2027</p>
-    <small>A journey begins long before departure.</small>
-  </div>
-</div>
-
-<header class="site-header">
-  <a class="brand tap-target" href="#home" aria-label="Austria 2027 ホーム">
-    <span class="brand-symbol" aria-hidden="true">
-      <svg viewBox="0 0 48 48">
-        <path d="M8 39V21l8-8 8 8v18M24 39V10l8 7 8-7v29M13 39v-8h6v8M29 39v-9h6v9M20 15h8"
-          fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span class="brand-copy">
-      <strong>Austria 2027</strong>
-      <small>Live like a local, walk like a traveler.</small>
-    </span>
-  </a>
-
-  <nav class="desktop-nav" aria-label="メインメニュー"><a href="index.html" class="active">Home</a><a href="schedule.html">Schedule</a><a href="hotels.html">Hotels</a><a href="rail.html">Rail</a><a href="gourmet.html">Gourmet</a><a href="budget.html">Budget</a></nav>
-
-  <button class="menu-button tap-target" type="button" aria-label="メニューを開く" aria-expanded="false">
-    <span></span><span></span>
-  </button>
+<body class="editorial-home">
+<div class="scroll-progress"><span></span></div>
+<header class="editorial-header">
+  <a class="editorial-brand" href="index.html">Austria 2027</a>
+  <nav>
+    <a href="schedule.html">Schedule</a><a href="hotels.html">Hotels</a><a href="gourmet.html">Gourmet</a><a href="map.html">Map</a>
+  </nav>
+  <button class="menu-button" aria-label="メニュー" aria-expanded="false"><span></span><span></span></button>
 </header>
-
-<nav class="mobile-menu" aria-label="スマホメニュー"><a class="tap-target" href="index.html">Home</a>
-<a class="tap-target" href="flights.html">Flights</a>
-<a class="tap-target" href="hotels.html">Hotels</a>
-<a class="tap-target" href="rail.html">Rail</a>
-<a class="tap-target" href="schedule.html">Schedule</a>
-<a class="tap-target" href="gourmet.html">Gourmet</a>
-<a class="tap-target" href="cafe.html">Cafe</a>
-<a class="tap-target" href="map.html">Map</a>
-<a class="tap-target" href="budget.html">Budget</a>
-<a class="tap-target" href="packing.html">Packing</a></nav>
-
+<nav class="mobile-menu">
+  <a href="schedule.html">Schedule</a><a href="flights.html">Flights</a><a href="hotels.html">Hotels</a><a href="rail.html">Rail</a><a href="gourmet.html">Gourmet</a><a href="cafe.html">Cafe</a><a href="map.html">Map</a><a href="budget.html">Budget</a><a href="packing.html">Packing</a>
+</nav>
 <main>
-<section class="hero page-frame" id="home">
-  <div class="flag-scene" aria-hidden="true">
-    <div class="flag-surface">
-      <div class="flag-band flag-red"></div>
-      <div class="flag-band flag-white"></div>
-      <div class="flag-band flag-red"></div>
-      <div class="fabric-light"></div>
-      <div class="fabric-shadow"></div>
-      <div class="fabric-grain"></div>
+  <section class="cover-panel">
+    <img src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=2200&q=88" alt="雨上がりのウィーンの街">
+    <div class="cover-shade"></div>
+    <div class="cover-copy">
+      <p>Golden Week · 2027</p>
+      <h1>Austria<br>2027</h1>
+      <span>静けさの中に、高揚感</span>
     </div>
-  </div>
+    <a class="cover-scroll" href="#journey">Scroll</a>
+  </section>
 
-  <div class="hero-vignette" aria-hidden="true"></div>
+  <section class="intro-section" id="journey">
+    <p class="section-label">Journey</p>
+    <h2>街から湖へ<br>湖から古都へ</h2>
+    <div class="intro-meta"><span>8 Days</span><span>3 Cities</span><span>Spring</span></div>
+  </section>
 
-  <div class="hero-copy reveal">
-    <p class="eyebrow">Golden Week · 2027</p>
-    <h1>Austria<br class="mobile-break"> 2027</h1>
-    <p class="hero-script">A journey begins long before departure.</p>
-    <div class="hero-ornament" aria-hidden="true">
-      <span></span>
-      <svg viewBox="0 0 48 48">
-        <path d="M8 39V21l8-8 8 8v18M24 39V10l8 7 8-7v29M13 39v-8h6v8M29 39v-9h6v9M20 15h8"
-          fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span></span>
+  <section class="feature feature-dark">
+    <figure><img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=2200&q=88" alt="人が歩くウィーンの街"></figure>
+    <div class="feature-copy"><small>01 · Vienna</small><h2>Rainy Morning</h2><p>人の気配と石畳</p><a href="schedule.html">View schedule</a></div>
+  </section>
+
+  <section class="feature feature-light reverse">
+    <figure><img src="https://images.unsplash.com/photo-1530256379202-4077bd8ab2c6?auto=format&fit=crop&w=2200&q=88" alt="静かなハルシュタットの湖畔"></figure>
+    <div class="feature-copy"><small>02 · Hallstatt</small><h2>Misty Lake</h2><p>静かな朝</p><a href="hotels.html">View stay</a></div>
+  </section>
+
+  <section class="feature feature-sage">
+    <figure><img src="https://images.unsplash.com/photo-1555330600-877039de636d?auto=format&fit=crop&w=2200&q=88" alt="ザルツカンマーグートの湖と山"></figure>
+    <div class="feature-copy"><small>03 · Salzkammergut</small><h2>Slow Afternoon</h2><p>湖と山</p><a href="rail.html">View rail</a></div>
+  </section>
+
+  <section class="feature feature-amber reverse">
+    <figure><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=2200&q=88" alt="夕暮れのザルツブルク旧市街"></figure>
+    <div class="feature-copy"><small>04 · Salzburg</small><h2>Golden Evening</h2><p>夕暮れと鐘</p><a href="map.html">View map</a></div>
+  </section>
+
+  <section class="planner-strip">
+    <div><p class="section-label">Plan</p><h2>旅の情報</h2></div>
+    <div class="planner-links">
+      <a href="flights.html"><span>01</span><strong>Flights</strong><small>航空券</small></a>
+      <a href="hotels.html"><span>02</span><strong>Hotels</strong><small>宿泊</small></a>
+      <a href="rail.html"><span>03</span><strong>Rail</strong><small>鉄道</small></a>
+      <a href="schedule.html"><span>04</span><strong>Schedule</strong><small>日程</small></a>
     </div>
-    <p class="hero-jp">7〜8日間のオーストリア</p>
-  </div>
+  </section>
 
-  <div class="dashboard reveal" id="plan">
-    <article class="countdown-card glass-card">
-      <span class="card-kicker">Departure</span>
-      <p>出発まであと</p>
-      <strong><span id="days">—</span><small>日</small></strong>
-      <em>2027.04.24 出発予定</em>
-    </article>
+  <section class="stay-story">
+    <div class="stay-heading"><p class="section-label">Stay</p><h2>Three Nights<br>Three Moods</h2></div>
+    <div class="stay-grid">
+      <a href="hotels.html" class="stay-card tall"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=86" alt="ウィーンのホテル客室"><div><small>Vienna</small><h3>Hotel 1</h3><span>3 Nights</span></div></a>
+      <a href="hotels.html" class="stay-card"><img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=86" alt="湖畔のホテル客室"><div><small>Hallstatt</small><h3>Hotel 2</h3><span>2 Nights</span></div></a>
+      <a href="hotels.html" class="stay-card"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=86" alt="ザルツブルクのホテル客室"><div><small>Salzburg</small><h3>Hotel 3</h3><span>2 Nights</span></div></a>
+    </div>
+  </section>
 
-    <article class="progress-card glass-card">
-      <div class="progress-header">
-        <span class="card-kicker">Planning</span>
-        <h2>現在の進捗</h2>
-      </div>
-      <div class="progress-track">
-        <div class="progress-item active"><span class="progress-icon">✈</span><b>航空券</b><small>検討中</small></div>
-        <div class="progress-item"><span class="progress-icon">▰</span><b>ホテル</b><small>未定</small></div>
-        <div class="progress-item"><span class="progress-icon">▥</span><b>鉄道</b><small>未定</small></div>
-        <div class="progress-item"><span class="progress-icon">♨</span><b>グルメ</b><small>作成前</small></div>
-        <div class="progress-item"><span class="progress-icon">●</span><b>コース</b><small>作成前</small></div>
-      </div>
-    </article>
-  </div>
-</section>
+  <section class="food-story">
+    <div class="food-heading"><p class="section-label">Taste</p><h2>Austrian<br>Gourmet</h2><a href="gourmet.html">View all</a></div>
+    <div class="food-scroll">
+      <article><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=86" alt="ウィーナーシュニッツェル"><small>Vienna</small><h3>Wiener Schnitzel</h3></article>
+      <article><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=86" alt="ザッハトルテ"><small>Vienna</small><h3>Sachertorte</h3></article>
+      <article><img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1200&q=86" alt="カイザーシュマーレン"><small>Austria</small><h3>Kaiserschmarrn</h3></article>
+      <article><img src="https://images.unsplash.com/photo-1568571780765-9276ac8b75a1?auto=format&fit=crop&w=1200&q=86" alt="アプフェルシュトゥルーデル"><small>Austria</small><h3>Apfelstrudel</h3></article>
+    </div>
+  </section>
 
-<section class="section mood-section page-frame" id="mood">
-  <div class="section-heading reveal">
-    <p>Travel mood</p>
-    <h2>写真集をめくるように</h2>
-    <span>街には人の気配を、自然には静けさを。スクロールするたび、旅の時間が少しずつ進む。</span>
-  </div>
+  <section class="rail-story">
+    <img src="https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=2200&q=86" alt="アルプスを走る列車からの景色">
+    <div><p class="section-label">Rail</p><h2>Window Seat</h2><span>Vienna → Hallstatt → Salzburg</span><a href="rail.html">View route</a></div>
+  </section>
 
-  <div class="story-stack">
-    <article class="story-panel reveal">
-      <figure class="story-image ken-burns">
-        <img src="https://images.unsplash.com/photo-1734156500741-95e41477c19b?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="ウィーンの街を歩く人々">
-        <figcaption><span>01</span><strong>Vienna</strong><small>Rain after the morning tram.</small></figcaption>
-      </figure>
-      <div class="story-copy">
-        <p class="eyebrow">Rainy city walk</p>
-        <h3>人の流れに混ざって、街を歩く。</h3>
-        <p>観光地だけを切り取らず、ウィーンの日常へ入っていく。濡れた石畳、傘、トラム、カフェの灯り。</p>
-      </div>
-    </article>
-
-    <article class="story-panel reverse reveal">
-      <figure class="story-image ken-burns">
-        <img src="https://images.unsplash.com/photo-1530256379202-4077bd8ab2c6?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="朝霧に包まれたハルシュタットの湖畔">
-        <figcaption><span>02</span><strong>Hallstatt</strong><small>Mist between lake and mountain.</small></figcaption>
-      </figure>
-      <div class="story-copy">
-        <p class="eyebrow">Misty morning</p>
-        <h3>静かな朝を、予定として残す。</h3>
-        <p>自然を大きく見せすぎず、自分が湖畔に立ったときの距離感で。写真を撮ったあとに、何もしない時間をつくる。</p>
-      </div>
-    </article>
-
-    <article class="story-panel reveal">
-      <figure class="story-image ken-burns">
-        <img src="https://images.unsplash.com/photo-1780503779063-7cd399dfe7b7?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="夕暮れのザルツブルク旧市街">
-        <figcaption><span>03</span><strong>Salzburg</strong><small>Golden light before the bells.</small></figcaption>
-      </figure>
-      <div class="story-copy">
-        <p class="eyebrow">Golden evening</p>
-        <h3>夕暮れが街を変える瞬間へ。</h3>
-        <p>歩いてたどり着ける場所から、ゆっくり暗くなる街を見る。鐘の音と街灯が、一日の終わりを知らせる。</p>
-      </div>
-    </article>
-
-    <article class="story-panel reverse reveal">
-      <figure class="story-image ken-burns">
-        <img src="https://images.unsplash.com/photo-1555330600-877039de636d?ixlib=rb-4.1.0&auto=format&fit=crop&w=1800&q=84" alt="緑に囲まれたザルツカンマーグートの湖畔">
-        <figcaption><span>04</span><strong>Salzkammergut</strong><small>An afternoon with nowhere to rush.</small></figcaption>
-      </figure>
-      <div class="story-copy">
-        <p class="eyebrow">Green afternoon</p>
-        <h3>移動しない午後も、旅の一部。</h3>
-        <p>山や湖の壮大さよりも、そこで過ごせる時間を大切に。湖畔を歩き、座り、少し遠くを見る。</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="route-section page-frame" id="route">
-  <div class="section-heading reveal">
-    <p>Journey route</p>
-    <h2>日本から、静かな湖と街へ</h2>
-    <span>移動そのものも旅の物語として残す。</span>
-  </div>
-
-  <div class="route-map reveal">
-    <div class="route-line" aria-hidden="true"></div>
-
-    <article class="route-stop">
-      <span class="route-dot">01</span>
-      <small>Start</small>
-      <h3>Japan</h3>
-      <p>旅は空港へ向かう朝から始まる。</p>
-    </article>
-
-    <article class="route-stop">
-      <span class="route-dot">02</span>
-      <small>City</small>
-      <h3>Vienna</h3>
-      <p>人の気配、宮殿、カフェ、石畳。</p>
-    </article>
-
-    <article class="route-stop">
-      <span class="route-dot">03</span>
-      <small>Lake</small>
-      <h3>Salzkammergut</h3>
-      <p>湖畔で速度を落とす二日間。</p>
-    </article>
-
-    <article class="route-stop">
-      <span class="route-dot">04</span>
-      <small>Evening</small>
-      <h3>Salzburg</h3>
-      <p>夕暮れの街で旅を締めくくる。</p>
-    </article>
-  </div>
-</section>
-
-<section class="section destinations-section page-frame" id="places">
-  <div class="section-heading reveal">
-    <p>Destinations</p>
-    <h2>今回の候補地</h2>
-    <span>都市 湖 山</span>
-  </div>
-
-  <div class="destination-list">
-    <article class="destination-row reveal">
-      <span class="destination-number">01</span>
-      <div><h3>Vienna</h3><p>宮殿 教会 カフェ</p></div>
-      <em>3 nights</em>
-    </article>
-    <article class="destination-row reveal">
-      <span class="destination-number">02</span>
-      <div><h3>Salzkammergut</h3><p>湖畔の日常</p></div>
-      <em>2 nights</em>
-    </article>
-    <article class="destination-row reveal">
-      <span class="destination-number">03</span>
-      <div><h3>Salzburg</h3><p>夕暮れ 鐘 石畳</p></div>
-      <em>2 nights</em>
-    </article>
-  </div>
-</section>
-
-<section class="section quick-section page-frame"><div class="section-heading reveal"><p>Trip tools</p><h2>旅の全体像</h2><span>必要な情報をひとつに</span></div><div class="quick-grid"><a class="quick-card reveal" href="flights.html"><small>01</small><h3>Flights</h3><span>航空券</span></a><a class="quick-card reveal" href="hotels.html"><small>02</small><h3>Hotels</h3><span>宿泊</span></a><a class="quick-card reveal" href="rail.html"><small>03</small><h3>Rail</h3><span>鉄道</span></a><a class="quick-card reveal" href="schedule.html"><small>04</small><h3>Schedule</h3><span>日程</span></a><a class="quick-card reveal" href="gourmet.html"><small>05</small><h3>Gourmet</h3><span>食</span></a><a class="quick-card reveal" href="cafe.html"><small>06</small><h3>Cafe</h3><span>カフェ</span></a><a class="quick-card reveal" href="map.html"><small>07</small><h3>Map</h3><span>地図</span></a><a class="quick-card reveal" href="budget.html"><small>08</small><h3>Budget</h3><span>予算</span></a><a class="quick-card reveal" href="packing.html"><small>09</small><h3>Packing</h3><span>持ち物</span></a></div></section><section class="note-section page-frame">
-  <div class="note-card reveal">
-    <p>Concierge note</p>
-    <blockquote>この旅は、観光地をいくつ回ったかではなく、<br>“あの朝の空気を覚えているか”で完成する。</blockquote>
-    <small>Austria 2027</small>
-  </div>
-</section>
+  <section class="final-grid">
+    <a href="budget.html"><small>Budget</small><strong>¥400,000</strong><span>Target / Person</span></a>
+    <a href="packing.html"><small>Packing</small><strong>Checklist</strong><span>Before departure</span></a>
+    <a href="map.html"><small>Map</small><strong>3 Stops</strong><span>Vienna · Hallstatt · Salzburg</span></a>
+  </section>
 </main>
-
-<footer class="page-frame">
-  <span>Austria 2027</span>
-  <span>Planning together, one step at a time.</span>
-</footer>
-
-<nav class="mobile-tabbar" aria-label="スマホ下部メニュー"><a class="tap-target active" href="index.html"><span>⌂</span><small>Home</small></a><a class="tap-target" href="schedule.html"><span>◫</span><small>Schedule</small></a><a class="tap-target" href="map.html"><span>⌖</span><small>Map</small></a><a class="tap-target" href="budget.html"><span>¥</span><small>Budget</small></a></nav>
-
-<script src="js/app.js"></script>
-</body>
-</html>
+<footer><strong>Austria 2027</strong><span>A journey begins long before departure</span></footer>
+<nav class="mobile-tabbar"><a class="active" href="index.html">Home</a><a href="schedule.html">Schedule</a><a href="map.html">Map</a><a href="budget.html">Budget</a></nav>
+<script src="js/editorial.js"></script>
+</body></html>
