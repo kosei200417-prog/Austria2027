@@ -1,14 +1,8 @@
-# Austria 2027 v0.5.0
+# Austria 2027 — v0.6.0 Provisional
 
-写真集 × 旅のしおりのホームデザイン。
+暫定日程、候補航空券、ウィーン・ザルツブルク・ハルシュタットの公式資料に基づく都市ノートを追加しました。
 
-主な変更:
-- カード一覧を廃止
-- 大きな写真で旅を読み進める構成
-- Vienna / Hallstatt / Salzkammergut / Salzburg
-- ホテル仮写真と Hotel 1〜3
-- オーストリア料理の注目カード
-- Rail / Budget / Packing / Mapへの導線
-- スマホ下部ナビ
-
-Commit: `Release v0.5.0 editorial journey`
+- Travel dates: 29 April – 5 May 2027
+- Japan arrival: 6 May 2027
+- Flights are provisional
+- City pages: Vienna / Salzburg / Hallstatt
