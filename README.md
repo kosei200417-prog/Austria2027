@@ -1,9 +1,20 @@
-# Austria 2027 — v0.7.1
+# Austria 2027 — v0.8.0
 
-修正内容：
-- 各詳細ページが白紙になる不具合を修正
-- `#days` が存在しないページで JavaScript が停止していた問題を解消
-- JavaScriptやIntersectionObserverが動かない環境でも本文が表示されるフォールバックを追加
-- 日程、航空券、Vienna、Salzburg、Hallstatt の本文は v0.7.0 の内容を維持
+## Current route
+Vienna → Salzburg → Vienna Airport
 
-ZIPの中身をリポジトリ直下へ上書きしてください。
+## Current provisional schedule
+- 29 Apr: KIX 18:00 → ICN 19:55 (Eastar Jet candidate)
+- 29 Apr: ICN 23:55 → Dubai → Vienna (Emirates candidate)
+- 30 Apr: Vienna arrival / city walk
+- 1 May: Vienna history & opera
+- 2 May: Vienna → Salzburg
+- 3 May: Salzburg / evening transfer toward Vienna Airport
+- Return: depart Vienna 3 May night or 4 May early morning
+- Target: back in Japan by the morning of 5 May
+
+Hallstatt is hidden from the current route but its page is retained as an archive.
+
+## GitHub Desktop
+Commit message:
+Update v0.8.0 Vienna Salzburg route
