@@ -20,3 +20,7 @@ Map pacing refined with distinct Austria, Vienna and Salzburg hold sections. Vie
 
 ## v0.10.0 Westbound Flight Route
 Corrected globe motion and flight direction to Osaka → Seoul → Dubai → Vienna. Austria/Vienna/Salzburg chapter timing unchanged.
+
+
+## v0.10.1 Geographic Globe
+World land silhouette rebuilt from geographic lon/lat reference geometry; Osaka and Vienna markers corrected geographically. Seoul/Dubai waypoints removed; westbound Osaka → Vienna motion retained.
