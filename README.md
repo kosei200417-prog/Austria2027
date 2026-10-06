@@ -12,3 +12,11 @@ Map redesigned for Osaka → Vienna → Salzburg with scroll-driven flight anima
 
 ## v0.9.8 Camera Journey
 Map motion rebuilt: rotating earth/camera journey Osaka → Europe → Austria → Vienna → Salzburg, with city-photo zoom reveals.
+
+
+## v0.9.9 Chapter Holds
+Map pacing refined with distinct Austria, Vienna and Salzburg hold sections. Vienna display time substantially extended.
+
+
+## v0.10.0 Westbound Flight Route
+Corrected globe motion and flight direction to Osaka → Seoul → Dubai → Vienna. Austria/Vienna/Salzburg chapter timing unchanged.

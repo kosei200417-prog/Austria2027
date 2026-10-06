@@ -17,9 +17,9 @@
 .map-intro .kicker{font:500 10px Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
 .map-intro h1{margin:8px 0;font:500 clamp(42px,7vw,76px)/.95 "Cormorant Garamond",serif}
 .map-intro p{max-width:560px;margin:auto;font-size:11px;line-height:1.9}
-.camera-story{height:420svh;position:relative}
+.camera-story{height:600svh;position:relative}
 .camera-sticky{height:100svh;position:sticky;top:0;overflow:hidden;background:var(--cream)}
-.scene{position:absolute;inset:0;overflow:hidden}
+.scene{position:absolute;inset:0;overflow:hidden}.chapter-rail{position:absolute;z-index:30;right:16px;top:50%;transform:translateY(-50%);display:grid;gap:8px}.chapter-rail i{display:block;width:4px;height:4px;border-radius:50%;background:rgba(37,55,47,.24)}.chapter-rail i.active{height:22px;border-radius:8px;background:var(--red)}
 .earth-camera{position:absolute;inset:0;transform-origin:center;will-change:transform}
 .earth{position:absolute;width:min(76vw,680px);aspect-ratio:1;left:50%;top:51%;transform:translate(-50%,-50%);border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 28%,#fbf8f0 0 14%,#e6e1d5 58%,#d5cebf 100%);box-shadow:inset -35px -30px 85px rgba(37,55,47,.13),0 30px 80px rgba(37,55,47,.11)}
 .earth-map{position:absolute;width:210%;height:100%;left:-3%;top:0;will-change:transform}
@@ -27,8 +27,8 @@
 .marker{position:absolute;z-index:6;transform:translate(-50%,-50%);transition:opacity .25s}
 .marker::before{content:"";display:block;width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 6px rgba(164,73,69,.13);margin:auto}
 .marker span{display:block;margin-top:7px;font:600 8px Inter,sans-serif;letter-spacing:.12em;white-space:nowrap}
-.osaka-mark{left:42%;top:48%}.europe-mark{left:65%;top:39%;opacity:0}
-.plane{position:absolute;z-index:7;left:42%;top:48%;font-size:21px;transform:translate(-50%,-50%) rotate(-32deg);filter:grayscale(1)}
+.osaka-mark{left:76%;top:48%}.europe-mark{left:43%;top:39%;opacity:0}
+.flight-waypoint{position:absolute;z-index:5;opacity:0;transform:translate(-50%,-50%);font:600 7px Inter,sans-serif;letter-spacing:.1em;white-space:nowrap}.flight-waypoint i{display:block;width:5px;height:5px;border-radius:50%;background:var(--red);margin:0 auto 5px}.seoul-waypoint{left:72%;top:45%}.dubai-waypoint{left:52%;top:55%}.plane{position:absolute;z-index:7;left:76%;top:48%;font-size:21px;transform:translate(-50%,-50%) rotate(-32deg);filter:grayscale(1)}
 .stage-copy{position:absolute;z-index:20;left:max(16px,6vw);top:88px;max-width:310px}
 .stage-copy small{font:500 9px Inter,sans-serif;letter-spacing:.18em;color:var(--red);text-transform:uppercase}
 .stage-copy h2{font:500 clamp(30px,5vw,50px)/1 "Cormorant Garamond",serif;margin:6px 0}
@@ -66,13 +66,15 @@
 <section class="map-intro"><p class="kicker">Journey Map</p><h1>Osaka → Austria</h1><p>大阪からヨーロッパへ。地球を西へ進み、オーストリアに近づく。そこからウィーンとザルツブルク、2つの街へ。</p></section>
 <section class="camera-story" id="cameraStory">
  <div class="camera-sticky">
-  <div class="scene">
+  <div class="scene"><div class="chapter-rail" aria-hidden="true"><i></i><i></i><i></i></div>
    <div class="stage-copy" id="stageCopy"><small>01 · Departure</small><h2 id="stageTitle">From Osaka</h2><p id="stageText">大阪から約9,000km。スクロールとともにヨーロッパへ向かいます。</p></div>
    <div class="earth-camera" id="earthCamera">
     <div class="earth">
      <div class="earth-map" id="earthMap"><svg viewBox="0 0 1000 500" aria-hidden="true"><g class="land"><path d="M45 150l85-70 115 4 80 55-38 53-83 12-42 72-71-18-17-67-54-15z"/><path d="M250 275l65 22 41 76-27 102-55 5-30-89-31-70z"/><path d="M430 112l65-42 115 8 50 40 80 5 96 63-20 58-102 4-75 52-103-14-46-67-77-22z"/><path d="M540 305l74 19 40 75-24 86-61-2-44-92z"/><path d="M790 325l78-20 78 38-12 64-85 24-66-43z"/><path d="M890 155l33-18 30 29-15 42-36-11z"/></g></svg></div>
      <div class="marker osaka-mark" id="osakaMark"><span>OSAKA</span></div>
      <div class="marker europe-mark" id="europeMark"><span>EUROPE</span></div>
+     <div class="flight-waypoint seoul-waypoint" id="seoulWaypoint"><i></i><span>SEOUL</span></div>
+     <div class="flight-waypoint dubai-waypoint" id="dubaiWaypoint"><i></i><span>DUBAI</span></div>
      <div class="plane" id="plane">✈</div>
     </div>
    </div>
@@ -100,6 +102,7 @@
  const story=document.getElementById('cameraStory');
  const earthCamera=document.getElementById('earthCamera'), earthMap=document.getElementById('earthMap');
  const plane=document.getElementById('plane'), osaka=document.getElementById('osakaMark'), europe=document.getElementById('europeMark');
+ const seoul=document.getElementById('seoulWaypoint'), dubai=document.getElementById('dubaiWaypoint');
  const at=document.getElementById('austriaLayer'), vp=document.getElementById('viennaPoint'), sp=document.getElementById('salzburgPoint');
  const vf=document.getElementById('viennaPhoto'), sf=document.getElementById('salzburgPhoto'), dist=document.getElementById('distance');
  const cap=document.getElementById('sceneCaption'), title=document.getElementById('stageTitle'), txt=document.getElementById('stageText');
@@ -110,32 +113,42 @@
  function setCard(el,t,op){el.style.opacity=op;el.style.transform=`translate(-50%,-50%) scale(${t})`}
  function update(){
    const r=story.getBoundingClientRect(), travel=Math.max(1,story.offsetHeight-innerHeight), p=clamp(-r.top/travel);
-   const fly=seg(p,.00,.27), zoom=seg(p,.22,.42), vienna=seg(p,.40,.58), move=seg(p,.58,.73), salz=seg(p,.72,.92);
+   const fly=seg(p,.00,.20), zoom=seg(p,.17,.31), vienna=seg(p,.39,.47), move=seg(p,.66,.74), salz=seg(p,.79,.87);
    // Earth rotates beneath a camera that subtly zooms toward Europe.
-   earthMap.style.transform=`translateX(${-31*fly}%)`;
+   earthMap.style.transform=`translateX(${22*fly}%)`;
    earthCamera.style.transform=`scale(${1+1.7*zoom}) translate(${(-8*zoom)}%,${5*zoom}%)`;
-   earthCamera.style.opacity=String(1-seg(p,.35,.46));
-   const px=42+23*fly, py=48-9*fly-8*Math.sin(fly*Math.PI);
-   plane.style.left=px+'%'; plane.style.top=py+'%'; plane.style.transform=`translate(-50%,-50%) rotate(${-32+10*fly}deg)`;
-   osaka.style.opacity=String(1-seg(p,.08,.18)); europe.style.opacity=String(seg(p,.14,.25));
-   at.style.opacity=String(seg(p,.34,.45));
+   earthCamera.style.opacity=String(1-seg(p,.27,.34));
+   let px,py,rot;
+   if(fly<.18){const q=fly/.18; px=76+(72-76)*q; py=48+(45-48)*q-2*Math.sin(q*Math.PI); rot=-115;}
+   else if(fly<.62){const q=(fly-.18)/.44; px=72+(52-72)*q; py=45+(55-45)*q-7*Math.sin(q*Math.PI); rot=-118;}
+   else{const q=(fly-.62)/.38; px=52+(43-52)*q; py=55+(39-55)*q-5*Math.sin(q*Math.PI); rot=-142;}
+   plane.style.left=px+'%'; plane.style.top=py+'%'; plane.style.transform=`translate(-50%,-50%) rotate(${rot}deg)`;
+   if(seoul)seoul.style.opacity=String(seg(fly,.12,.18)*(1-seg(fly,.35,.48)));
+   if(dubai)dubai.style.opacity=String(seg(fly,.48,.60)*(1-seg(fly,.78,.90)));
+   osaka.style.opacity=String(1-seg(p,.07,.14)); europe.style.opacity=String(seg(p,.11,.18));
+   at.style.opacity=String(seg(p,.28,.34));
    // Camera zooms into Austria, then pans Vienna -> Salzburg.
-   const atScale=.72+.78*seg(p,.34,.55);
+   const atScale=.72+.78*seg(p,.29,.39);
    const panX = move*18;
    at.style.transform=`translateX(${panX}%) scale(${atScale})`;
-   vp.style.opacity=String(seg(p,.39,.47)*(1-seg(p,.64,.72)));
-   sp.style.opacity=String(seg(p,.61,.70));
-   dist.style.opacity=String(1-seg(p,.28,.38));
+   vp.style.opacity=String(seg(p,.36,.40)*(1-seg(p,.68,.73)));
+   sp.style.opacity=String(seg(p,.70,.76));
+   dist.style.opacity=String(1-seg(p,.22,.28));
    // Photos grow directly out of their city points, then recede.
-   const vo=vienna*(1-seg(p,.58,.67)), vs=.08+.92*vienna;
+   const vo=vienna*(1-seg(p,.64,.70)), vs=.08+.92*vienna;
    setCard(vf,vs,vo);
    const so=salz, ss=.08+.92*salz;
    setCard(sf,ss,so);
-   cap.style.opacity=String(seg(p,.38,.48));
-   if(p<.22){title.textContent='From Osaka';txt.textContent='大阪から約9,000km。スクロールとともにヨーロッパへ向かいます。'}
-   else if(p<.42){title.textContent='Toward Austria';txt.textContent='地球が回り、ヨーロッパへ。そこからオーストリアへ近づきます。'}
-   else if(p<.66){title.textContent='Vienna';txt.textContent='最初の拠点、ウィーンへ。'}
-   else{title.textContent='Salzburg';txt.textContent='カメラは西へ移動し、2つ目の拠点ザルツブルクへ。'}
+   cap.style.opacity=String(seg(p,.31,.36));
+   const dots=[...document.querySelectorAll('.chapter-rail i')]; dots.forEach(d=>d.classList.remove('active'));
+   if(p>=.22&&p<.38&&dots[0])dots[0].classList.add('active');
+   else if(p>=.38&&p<.76&&dots[1])dots[1].classList.add('active');
+   else if(p>=.76&&dots[2])dots[2].classList.add('active');
+   if(p<.22){title.textContent='From Osaka';txt.textContent='大阪からソウル、ドバイを経由して西へ。ウィーンを目指します。'}
+   else if(p<.38){title.textContent='Austria';txt.textContent='ヨーロッパの中央へ。ここからオーストリアの2拠点をたどります。'}
+   else if(p<.66){title.textContent='Vienna';txt.textContent='BASE 01。最初の拠点ウィーンで、いったんカメラが止まります。'}
+   else if(p<.76){title.textContent='Westbound';txt.textContent='ウィーンを離れ、オーストリアを西へ。'}
+   else{title.textContent='Salzburg';txt.textContent='BASE 02。2つ目の拠点ザルツブルクへ到着。'}
  }
  if(!reduced){addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();}
 })();
