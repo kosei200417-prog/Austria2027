@@ -1,18 +1,138 @@
-<!doctype html><html lang="ja"><head><script>document.documentElement.classList.add("js")</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#b73d42"><meta name="description" content="Austria 2027 — Journey Map"><title>Map | Austria 2027</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animation.css"><link rel="stylesheet" href="css/pages.css"></head><body class="inner-page"><div class="scroll-progress" aria-hidden="true"><span></span></div><header class="site-header scrolled"><a class="brand tap-target" href="index.html" aria-label="Austria 2027 ホーム"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39V21l8-8 8 8v18M24 39V10l8 7 8-7v29M13 39v-8h6v8M29 39v-9h6v9M20 15h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-copy"><strong>Austria 2027</strong><small>Journey Planner</small></span></a><nav class="desktop-nav" aria-label="メインメニュー"><a href="index.html">Home</a>
-<a href="flights.html">Flights</a>
-<a href="hotels.html">Hotels</a>
-<a href="rail.html">Rail</a>
-<a href="schedule.html">Schedule</a>
-<a href="gourmet.html">Gourmet</a></nav><button class="menu-button tap-target" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button></header><nav class="mobile-menu" aria-label="スマホメニュー"><a class="tap-target" href="index.html">Home</a>
-<a class="tap-target" href="flights.html">Flights</a>
-<a class="tap-target" href="hotels.html">Hotels</a>
-<a class="tap-target" href="rail.html">Rail</a>
-<a class="tap-target" href="schedule.html">Schedule</a>
-<a class="tap-target" href="gourmet.html">Gourmet</a>
-<a class="tap-target" href="cafe.html">Cafe</a>
-<a class="tap-target active" href="map.html">Map</a>
-<a class="tap-target" href="budget.html">Budget</a>
-<a class="tap-target" href="packing.html">Packing</a></nav><main class="inner-main page-frame"><section class="inner-hero reveal"><p>Route</p><h1>Journey Map</h1><span>3つの拠点</span></section><section class="content-section"><div class="map-board reveal"><div class="map-path"></div><article style="--x:18%;--y:35%"><span>01</span><h2>Vienna</h2><small>3 Nights</small></article><article style="--x:52%;--y:58%"><span>02</span><h2>Hallstatt</h2><small>2 Nights</small></article><article style="--x:77%;--y:31%"><span>03</span><h2>Salzburg</h2><small>2 Nights</small></article></div></section></main><footer class="page-frame"><span>Austria 2027</span><span>One step at a time</span></footer><nav class="mobile-tabbar" aria-label="スマホ下部メニュー"><a class="tap-target" href="index.html"><span>⌂</span><small>Home</small></a>
-<a class="tap-target" href="schedule.html"><span>◫</span><small>Schedule</small></a>
-<a class="tap-target active" href="map.html"><span>⌖</span><small>Map</small></a>
-<a class="tap-target" href="budget.html"><span>¥</span><small>Budget</small></a></nav><script src="js/app.js"></script></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+<script>document.documentElement.classList.add("js")</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#b73d42">
+<meta name="description" content="Austria 2027 — Osaka to Vienna & Salzburg">
+<title>Map | Austria 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animation.css"><link rel="stylesheet" href="css/pages.css">
+<style>
+.map-story{--cream:#f4f0e7;--ink:#25372f;--red:#a44945;--line:rgba(37,55,47,.2);background:var(--cream);color:var(--ink)}
+.map-story .map-intro{padding:96px max(18px,5vw) 34px;text-align:center}
+.map-story .map-intro .kicker{font:500 11px/1.2 Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.map-story .map-intro h1{margin:9px 0 8px;font:500 clamp(42px,7vw,76px)/.95 "Cormorant Garamond",serif}
+.map-story .map-intro p{margin:0 auto;max-width:560px;font-size:12px;line-height:1.9}
+.globe-stage{position:relative;min-height:1050px}
+.globe-sticky{position:sticky;top:0;height:100svh;min-height:620px;overflow:hidden;display:grid;place-items:center}
+.globe-copy{position:absolute;z-index:5;top:88px;left:max(18px,6vw)}
+.globe-copy small{display:block;font:500 10px Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.globe-copy strong{display:block;margin-top:5px;font:500 clamp(24px,4vw,42px) "Cormorant Garamond",serif}
+.globe{width:min(78vw,620px);aspect-ratio:1;border-radius:50%;position:relative;overflow:hidden;background:radial-gradient(circle at 36% 30%,#faf8f1 0 15%,#e8e4d8 55%,#d9d3c4 100%);box-shadow:inset -32px -22px 70px rgba(37,55,47,.13),0 28px 70px rgba(37,55,47,.12);transition:transform .3s ease}
+.world{position:absolute;inset:10%;opacity:.62}
+.world svg{width:100%;height:100%}
+.route-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.route-base{fill:none;stroke:rgba(164,73,69,.25);stroke-width:1.2;stroke-dasharray:3 4}
+.route-live{fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.city-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(164,73,69,.12)}
+.dot-osaka{left:80.5%;top:49.5%}.dot-vienna{left:48.5%;top:39.5%}
+.plane{position:absolute;left:80.5%;top:49.5%;z-index:4;font-size:23px;line-height:1;transform:translate(-50%,-50%) rotate(-35deg);filter:grayscale(1);will-change:left,top}
+.label{position:absolute;font:500 9px Inter,sans-serif;letter-spacing:.1em}
+.label.osaka{left:83%;top:51%}.label.vienna{left:40%;top:35%}
+.distance-pill{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(244,240,231,.86);backdrop-filter:blur(8px);font:500 10px Inter,sans-serif;letter-spacing:.08em;white-space:nowrap}
+.austria-stage{padding:72px max(14px,6vw) 90px}
+.austria-head{text-align:center;margin-bottom:38px}.austria-head small{font:500 10px Inter,sans-serif;letter-spacing:.18em;color:var(--red);text-transform:uppercase}.austria-head h2{font:500 clamp(35px,6vw,62px)/1 "Cormorant Garamond",serif;margin:8px 0}
+.at-map{position:relative;max-width:880px;margin:0 auto 48px;aspect-ratio:2.05;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(231,226,214,.65));overflow:hidden}
+.at-shape{position:absolute;inset:15% 8%;opacity:.78}
+.at-shape svg{width:100%;height:100%}
+.at-route{position:absolute;left:31%;right:24%;top:51%;height:1px;background:var(--red);transform:rotate(-6deg);transform-origin:left}
+.at-point{position:absolute;transform:translate(-50%,-50%);border:0;background:none;color:var(--ink);padding:0;cursor:pointer;text-align:center}
+.at-point::before{content:"";display:block;margin:0 auto 7px;width:11px;height:11px;border-radius:50%;background:var(--red);box-shadow:0 0 0 7px rgba(164,73,69,.12)}
+.at-point b{font:500 17px "Cormorant Garamond",serif}.at-point span{display:block;font:500 8px Inter,sans-serif;letter-spacing:.08em}
+.at-point.salzburg{left:31%;top:54%}.at-point.vienna{left:76%;top:45%}
+.city-popups{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:980px;margin:0 auto}
+.city-card{min-width:0;border-radius:24px;overflow:hidden;background:#e8e2d6;position:relative;aspect-ratio:4/3;isolation:isolate}
+.city-card img{width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.2,.8,.2,1)}
+.city-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(22,31,27,.72));z-index:1}
+.city-card .fallback{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(145deg,#d8d2c5,#eee9df);font:italic 42px "Cormorant Garamond",serif;color:#68756e}
+.city-card .card-copy{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;color:#fff}
+.city-card .card-copy small{font:500 9px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase}.city-card .card-copy h3{font:500 34px/1 "Cormorant Garamond",serif;margin:5px 0}.city-card .card-copy p{font-size:10px;line-height:1.6;margin:0;max-width:340px}
+.city-card.is-active img{transform:scale(1.07)}
+.map-note{max-width:680px;margin:44px auto 0;text-align:center;font-size:9px;line-height:1.7;opacity:.66}
+@media(max-width:700px){
+ .map-story .map-intro{padding:82px 14px 20px}.map-story .map-intro h1{font-size:46px}
+ .globe-stage{min-height:900px}.globe-sticky{min-height:560px}.globe-copy{top:72px;left:16px}
+ .globe{width:92vw}.distance-pill{bottom:68px;font-size:9px}
+ .austria-stage{padding:54px 14px 74px}.at-map{aspect-ratio:1.35;border-radius:20px}
+ .at-shape{inset:20% 4%}.at-point.salzburg{left:27%;top:57%}.at-point.vienna{left:78%;top:45%}
+ .city-popups{grid-template-columns:1fr;gap:14px}.city-card{aspect-ratio:1.25}.city-card .card-copy{left:17px;bottom:16px}.city-card .card-copy h3{font-size:30px}
+}
+@media(prefers-reduced-motion:reduce){.plane,.route-live,.globe,.city-card img{transition:none!important}}
+</style>
+</head>
+<body class="inner-page map-story">
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<header class="site-header scrolled"><a class="brand tap-target" href="index.html" aria-label="Austria 2027 ホーム"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39V21l8-8 8 8v18M24 39V10l8 7 8-7v29M13 39v-8h6v8M29 39v-9h6v9M20 15h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-copy"><strong>Austria 2027</strong><small>Journey Planner</small></span></a><nav class="desktop-nav" aria-label="メインメニュー"><a href="index.html">Home</a><a href="flights.html">Flights</a><a href="hotels.html">Hotels</a><a href="rail.html">Rail</a><a href="schedule.html">Schedule</a><a href="gourmet.html">Gourmet</a></nav><button class="menu-button tap-target" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button></header>
+<nav class="mobile-menu" aria-label="スマホメニュー"><a class="tap-target" href="index.html">Home</a><a class="tap-target" href="flights.html">Flights</a><a class="tap-target" href="hotels.html">Hotels</a><a class="tap-target" href="rail.html">Rail</a><a class="tap-target" href="schedule.html">Schedule</a><a class="tap-target" href="gourmet.html">Gourmet</a><a class="tap-target" href="cafe.html">Cafe</a><a class="tap-target active" href="map.html">Map</a><a class="tap-target" href="budget.html">Budget</a><a class="tap-target" href="packing.html">Packing</a></nav>
+
+<main>
+<section class="map-intro"><p class="kicker">Journey Map</p><h1>Osaka → Austria</h1><p>大阪から約9,000km。地球を西へ進み、ウィーンへ。そこからオーストリアを横切ってザルツブルクへ向かう、2拠点の旅。</p></section>
+
+<section class="globe-stage" id="globeStage">
+ <div class="globe-sticky">
+  <div class="globe-copy"><small>01 · Across the world</small><strong>Japan → Vienna</strong></div>
+  <div class="globe" id="globe">
+   <div class="world" aria-hidden="true"><svg viewBox="0 0 800 420"><g fill="#9ca79f"><path d="M68 112l42-38 72-12 62 22 25 35-17 27-45 8-29 37-38-7-17-37-49-8z"/><path d="M205 214l43 19 30 57-17 73-31 22-20-67-25-48z"/><path d="M335 100l57-28 87 5 37 28 53 5 57 40-13 35-72 6-45 31-68-10-31-42-51-15z"/><path d="M420 223l54 14 33 55-20 72-42 12-31-66z"/><path d="M600 248l59-13 54 27-7 44-61 18-46-29z"/><path d="M687 135l22-12 20 20-10 28-24-8z"/></g></svg></div>
+   <svg class="route-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path class="route-base" d="M81 50 C72 31,59 29,49 40"/><path class="route-live" id="routeLive" pathLength="1" d="M81 50 C72 31,59 29,49 40"/></svg>
+   <span class="city-dot dot-osaka"></span><span class="city-dot dot-vienna"></span>
+   <span class="label osaka">OSAKA</span><span class="label vienna">VIENNA</span>
+   <span class="plane" id="plane" aria-label="大阪からウィーンへ移動する飛行機">✈</span>
+  </div>
+  <div class="distance-pill">OSAKA → VIENNA · 約 9,000 km</div>
+ </div>
+</section>
+
+<section class="austria-stage">
+ <div class="austria-head"><small>02 · Two bases</small><h2>Vienna & Salzburg</h2><p>東のウィーンから、西のザルツブルクへ。</p></div>
+ <div class="at-map">
+  <div class="at-shape" aria-hidden="true"><svg viewBox="0 0 900 380"><path d="M65 190L112 135l90 4 52-40 85 20 69-32 72 29 76-25 72 35 79-13 73 45 64-3 31 50-54 33-85-2-56 37-90-10-61 29-84-19-82 27-62-31-76 9-54-43-71 2-30-43z" fill="#d8d2c5" stroke="#8d998f" stroke-width="2"/></svg></div>
+  <div class="at-route"></div>
+  <button class="at-point salzburg" data-city="salzburg" type="button"><b>Salzburg</b><span>WEST</span></button>
+  <button class="at-point vienna" data-city="vienna" type="button"><b>Vienna</b><span>EAST</span></button>
+ </div>
+ <div class="city-popups">
+  <article class="city-card is-active" id="card-vienna">
+   <div class="fallback">Vienna</div>
+   <img src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=1400&q=82" alt="ウィーンの街並み" onerror="this.style.display='none'">
+   <div class="card-copy"><small>Base 01 · East Austria</small><h3>Vienna</h3><p>帝国都市の記憶が残る首都。旅の最初の拠点。</p></div>
+  </article>
+  <article class="city-card" id="card-salzburg">
+   <div class="fallback">Salzburg</div>
+   <img src="https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=1400&q=82" alt="ザルツブルクの街並み" onerror="this.style.display='none'">
+   <div class="card-copy"><small>Base 02 · West Austria</small><h3>Salzburg</h3><p>バロックの旧市街と山の風景が重なる、西側の拠点。</p></div>
+  </article>
+ </div>
+ <p class="map-note">大阪–ウィーンは直線距離で約9,000km。ウィーン–ザルツブルクは直線距離で約252km。実際の移動距離は経路によって変わります。</p>
+</section>
+</main>
+<footer class="page-frame"><span>Austria 2027</span><span>One step at a time</span></footer>
+<nav class="mobile-tabbar" aria-label="スマホ下部メニュー"><a class="tap-target" href="index.html"><span>⌂</span><small>Home</small></a><a class="tap-target" href="schedule.html"><span>◫</span><small>Schedule</small></a><a class="tap-target active" href="map.html"><span>⌖</span><small>Map</small></a><a class="tap-target" href="budget.html"><span>¥</span><small>Budget</small></a></nav>
+<script src="js/app.js"></script>
+<script>
+(()=>{
+ const stage=document.getElementById('globeStage'), plane=document.getElementById('plane'), route=document.getElementById('routeLive'), globe=document.getElementById('globe');
+ if(!stage||!plane||!route)return;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function update(){
+  const r=stage.getBoundingClientRect(), max=Math.max(1,stage.offsetHeight-innerHeight);
+  const p=Math.max(0,Math.min(1,-r.top/max));
+  route.style.strokeDashoffset=String(1-p);
+  const x=81+(49-81)*p + Math.sin(p*Math.PI)*(-1.5);
+  const y=50+(40-50)*p - Math.sin(p*Math.PI)*12;
+  plane.style.left=x+'%'; plane.style.top=y+'%';
+  plane.style.transform='translate(-50%,-50%) rotate('+(-35-12*p)+'deg)';
+  globe.style.transform='scale('+(1+.055*p)+')';
+ }
+ if(reduced){route.style.strokeDashoffset='0';plane.style.left='49%';plane.style.top='40%';}
+ else{addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();}
+ document.querySelectorAll('.at-point').forEach(btn=>btn.addEventListener('click',()=>{
+   document.querySelectorAll('.city-card').forEach(c=>c.classList.remove('is-active'));
+   const c=document.getElementById('card-'+btn.dataset.city); if(c){c.classList.add('is-active');c.scrollIntoView({behavior:reduced?'auto':'smooth',block:'center'});}
+ }));
+})();
+</script>
+</body></html>
