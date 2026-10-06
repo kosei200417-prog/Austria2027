@@ -8,3 +8,7 @@ Current route: Vienna + Salzburg, returning toward Vienna Airport on 3 May (Plan
 
 ## v0.9.7 Map Journey
 Map redesigned for Osaka → Vienna → Salzburg with scroll-driven flight animation and two-base focus.
+
+
+## v0.9.8 Camera Journey
+Map motion rebuilt: rotating earth/camera journey Osaka → Europe → Austria → Vienna → Salzburg, with city-photo zoom reveals.
