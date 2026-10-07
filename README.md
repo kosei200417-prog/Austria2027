@@ -40,3 +40,7 @@ Vienna and Salzburg horizontal content margins aligned to the Schedule/Home rhyt
 
 ## v0.12.0 Travel Journal
 Added Journal page with five trip-day notes, device-local autosave, city filters, Home entry, and Schedule deep links.
+
+
+## v0.12.1 Compact Schedule
+Schedule rebuilt as compact horizontal day/photo cards, two cards per desktop viewport rhythm, DAY labels removed, copy simplified, city imagery corrected, Home typography inherited.
