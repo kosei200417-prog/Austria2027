@@ -28,3 +28,7 @@ World land silhouette rebuilt from geographic lon/lat reference geometry; Osaka 
 
 ## v0.11.0 Compact Home
 Home simplified to a two-city contents page. Hallstatt and Journey section removed; hero preserved; plan/hotel/gourmet/map/budget/packing condensed.
+
+
+## v0.11.1 Vienna Home Photo
+Replaced the ambiguous Vienna home card image with an identifiable Hofburg Palace / Michaelerplatz photograph in Vienna.
