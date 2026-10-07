@@ -24,3 +24,7 @@ Corrected globe motion and flight direction to Osaka → Seoul → Dubai → Vie
 
 ## v0.10.1 Geographic Globe
 World land silhouette rebuilt from geographic lon/lat reference geometry; Osaka and Vienna markers corrected geographically. Seoul/Dubai waypoints removed; westbound Osaka → Vienna motion retained.
+
+
+## v0.11.0 Compact Home
+Home simplified to a two-city contents page. Hallstatt and Journey section removed; hero preserved; plan/hotel/gourmet/map/budget/packing condensed.
