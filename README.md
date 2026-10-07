@@ -32,3 +32,7 @@ Home simplified to a two-city contents page. Hallstatt and Journey section remov
 
 ## v0.11.1 Vienna Home Photo
 Replaced the ambiguous Vienna home card image with an identifiable Hofburg Palace / Michaelerplatz photograph in Vienna.
+
+
+## v0.11.2 City Spacing
+Vienna and Salzburg horizontal content margins aligned to the Schedule/Home rhythm: 1180px desktop frame with 24px minimum side margin, and 14px mobile side margin.
