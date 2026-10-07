@@ -36,3 +36,7 @@ Replaced the ambiguous Vienna home card image with an identifiable Hofburg Palac
 
 ## v0.11.2 City Spacing
 Vienna and Salzburg horizontal content margins aligned to the Schedule/Home rhythm: 1180px desktop frame with 24px minimum side margin, and 14px mobile side margin.
+
+
+## v0.12.0 Travel Journal
+Added Journal page with five trip-day notes, device-local autosave, city filters, Home entry, and Schedule deep links.
